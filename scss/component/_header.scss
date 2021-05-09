@@ -1,0 +1,88 @@
+//Header
+
+header { 
+    display: grid;
+    grid-template-columns: 20% auto 25%;
+    .icon{
+        display: none;
+    }
+    nav{
+        display: none;
+    }
+    .hamburger{
+      float:left;
+    
+    }
+    .logo{
+        
+    }
+}
+
+
+
+
+
+
+@media (min-width:$xl ){
+
+
+header{
+    display: grid;
+    grid-template-columns: 20% auto 25%;
+    align-items: center;
+    max-width: $md;
+    grid-gap: 10px;
+    
+}
+
+header ul li {
+    display: inline;
+    padding-left: 50px;
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    font-family: $primary-font;
+    color: $primary-color;
+    font-size: $font-size;
+}
+.logo{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icon a{
+    padding: 2%;
+}
+}
+
+
+* {
+    box-sizing: border-box;
+  }
+
+
+
+
+
+/*
+.burger-1{
+    width: 25px;
+    height: 2px;
+    background: black;
+    
+}
+.burger-2{
+    width: 15px;
+    margin-top: 5px;
+    height: 2px;
+    background: black;
+}
+.burger-3{
+    width: 25px;
+    margin-top: 5px;
+    height: 2px;
+    background: black;
+}
+*/

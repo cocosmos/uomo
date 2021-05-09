@@ -1,0 +1,40 @@
+//text
+
+body{
+    font-family: $primary-font; 
+    
+}
+p {
+    font-size: $font-size;
+}
+
+h1{
+    font-size: $font-h;
+}
+h2{
+    font-size: 1em;
+}
+
+h5{
+    text-transform: uppercase;
+    font-size: 1.125em;
+    margin: 0;
+}
+
+.link a{
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.text{
+    line-height: 35px;
+}
+
+a{
+    font-family: $primary-font;
+}
+
+.text-simple{
+    font-size: $font-size;
+}
