@@ -727,6 +727,7 @@
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
+  cursor: pointer;
 }
 
 .btn_black {
@@ -758,6 +759,7 @@
   color: #767676;
   text-align: center;
   padding: 11px 13px;
+  cursor: pointer;
   display: flex;
 }
 .ctrl-btn img {
@@ -783,32 +785,43 @@ p {
 
 h1 {
   font-size: 2.1875em;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 h2 {
-  font-size: 1em;
+  font-size: 1.6em;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 h3 {
   font-family: "sofia-pro";
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 
 h4 {
   font-weight: 500;
   font-family: "sofia-pro";
-  font-size: 1.1em;
+  font-size: 1.2em;
   color: #222222;
   text-transform: uppercase;
-  margin: 2%;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 
 h5 {
   text-transform: uppercase;
   font-size: 1.125em;
   margin: 0;
+}
+
+h6 {
+  font-size: 1em;
+  font-weight: 400;
 }
 
 .link a {
@@ -835,6 +848,39 @@ a {
 
 .price__actual {
   font-size: 1em;
+}
+
+.collection__price {
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+.collection__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  font-weight: 200;
+  color: #222222;
+}
+.collection__title {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  color: #222222;
+}
+
+.deal__title {
+  color: #C32929;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+.deal__line {
+  border-top: #C32929 solid 2px;
+  width: 40px;
+  display: inline-block;
+  margin-right: 15px;
+  position: relative;
 }
 
 header .container {
@@ -1182,7 +1228,7 @@ footer .email input {
   margin-top: 7px;
   width: 1em;
 }
-.product__meta h2 {
+.product__meta h6 {
   width: 160px;
   overflow: hidden;
   white-space: nowrap;
@@ -1201,6 +1247,142 @@ footer .email input {
   margin: 3%;
 }
 .product:hover .product__image .btn {
+  bottom: 5px;
+}
+.product .price__old {
+  color: #767676;
+  text-decoration: line-through;
+}
+.product .price__discount {
+  margin-left: 3%;
+  color: #C32929;
+}
+.product .label {
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 6px 8px;
+}
+.product .label--white {
+  background: white;
+  color: black;
+}
+.product .label--black {
+  background: black;
+  color: white;
+}
+.product .label--red {
+  background: #C32929;
+  color: white;
+}
+
+.collection {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+.collection__card {
+  position: relative;
+  background-color: #E4E4E4;
+}
+.collection__meta {
+  padding: 30px;
+  bottom: 0;
+  bottom: 0;
+}
+.collection__line {
+  border-bottom: #222222 solid 2px;
+  width: 55px;
+  display: block;
+}
+.collection img {
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 50%;
+}
+.collection__red {
+  background-color: #D6001C;
+  color: #FFFFFF;
+}
+.collection__red .collection__link {
+  color: #FFFFFF;
+}
+.collection__red .collection__line {
+  border-color: #FFFFFF;
+}
+.collection__pink {
+  background-color: #F5E6E0;
+}
+@media (min-width: 768px) {
+  .collection {
+    gap: 1rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .collection__hotlist:first-child {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+  .collection__hotlist:nth-child(2) {
+    grid-column: 3/5;
+    grid-row: 1;
+  }
+  .collection__hotlist:nth-child(3) {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  .collection__hotlist:nth-child(4) {
+    grid-column: 4;
+    grid-row: 2;
+  }
+}
+.collection .deal {
+  background-image: url(../UOMO/assets/image327.png);
+  height: 280px;
+  width: 100%;
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.collection .deal__meta {
+  padding: 7%;
+  position: absolute;
+  bottom: 0;
+}
+.collection .deal__line {
+  bottom: 8px;
+}
+.collection .deal .collection__line {
+  margin-bottom: 25px;
+}
+.collection .deal h3 {
+  margin: 0;
+  line-height: 1.3em;
+}
+.collection .deal #countdown {
+  word-spacing: 20px;
+  font-size: 1.2em;
+  color: #222222;
+}
+.collection .deal p {
+  word-spacing: 30px;
+  margin: 0;
+  color: #767676;
+}
+
+.top-page .slides {
+  display: grid;
+  grid-template-columns: 50fr;
+  background-color: #F5E6E0;
+}
+.top-page .slides .item:nth-child(1) {
+  background: url("https://snap-photos.s3.amazonaws.com/img-thumbs/960w/HZZKGVVJ6I.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.top-page .slides .deal__line {
   bottom: 5px;
 }
 
@@ -1291,6 +1473,9 @@ body {
 body main {
   margin: 3%;
 }
+body main .trendy-products .product {
+  margin: 2%;
+}
 body main h3 {
   text-align: center;
 }
@@ -1317,7 +1502,6 @@ body main .limited_slider {
   position: relative;
 }
 body main .limited_slider .ctrl-btn {
-  z-index: 99;
   position: absolute;
   top: 27%;
 }
@@ -1338,22 +1522,65 @@ body main .limited_slider .ctrl-btn.pro-next {
     display: block;
   }
 }
-/*
-.label {
-  display: inline-block;
-  font-size: 12px;
-  text-transform: uppercase;
-  padding: 6px 8px;
-
-  &--white { background: white; color: black; }
-  &--black { background: black; color: white; }
-  &--red { background: red; color: white; }
+.shop {
+  margin: 3%;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: grid;
 }
-*/
-/* 
-
+@media (min-width: 768px) {
+  .shop {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1200px) {
+  .shop {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
-*/
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter {
+  width: 150px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter input {
+  width: 50px;
+  border: 0;
+  line-height: 30px;
+  font-size: 20px;
+  text-align: center;
+  background: #0052cc;
+  color: #fff;
+  appearance: none;
+  outline: 0;
+}
+
+.counter span {
+  display: block;
+  font-size: 25px;
+  padding: 0 10px;
+  cursor: pointer;
+  color: #0052cc;
+  user-select: none;
+}
 
 /*# sourceMappingURL=styles.css.map */
