@@ -1,0 +1,38 @@
+/*GOOGLE MAPS INFO DESIGN*/
+/*Please click on the map to see the change*/
+#map{
+    height: 80vh;
+    p{
+        line-height: 10px;
+    }
+    .gm-style .gm-style-iw-c{
+        border-radius: 0!important;
+    }
+    
+    .gm-ui-hover-effect{
+        top: 0!important;
+        right: 0!important;
+    }
+    .gm-style-iw-t::after{
+        display: none!important;
+    }
+}
+
+/*Locator part*/
+.locator{
+    padding-right: 1em;
+    ul{
+        max-height: 75vh; 
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            width: 0.5em;
+        }
+        &::-webkit-scrollbar-track {
+            display: none;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $grey-light;
+            border-radius: 30px;
+        }
+    }
+}

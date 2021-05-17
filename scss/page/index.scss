@@ -72,8 +72,6 @@ body{
 @media (min-width:$md ){
     body{
         main{
-
-        
             .container{
                 .social-media{
                     grid-template-columns: repeat(6, minmax(0, 1fr));

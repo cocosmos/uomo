@@ -1,52 +1,43 @@
-/*
-
 .accordion{
-    &__question{
-        display: flex;
-        cursor: pointer;
-    }
-}
-
-&__answer{
-    display: none;
-}
-
-&__item{
-
-}*/
-.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
+  h2{
+    padding: 2% 0;
+    font-weight:500 ;
+  }
+  &__question{
     border: none;
+    border-bottom: 1px solid $grey-light;
     text-align: left;
     outline: none;
-    font-size: 15px;
+    font-size: 16px;
+    line-height: 35px;
     transition: 0.4s;
+    padding: 0;
+    background-color: $white;
+    color:$primary-color;
+    font-weight: 600;
+    width: 100%;
+
+    &:hover{
+      border-bottom: 2px solid $grey;
+    }
+    &:after{
+      content: '+'; 
+      float: right;
+    }
   }
-  
-  .active, .accordion:hover {
-    background-color: #ccc;
-  }
-  
-  .accordion:after {
-    content: '\002B';
-    color: #777;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-  }
-  
-  .active:after {
-    content: "\2212";
-  }
-  
-  .answer {
-    padding: 0 18px;
-    background-color: white;
+
+  &__answer{
+    padding: 15px 0px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
   }
+
+  .active{
+    border-bottom: 2px solid $grey;
+    &:after{
+      content: "-";
+    }
+  }
+
+}
