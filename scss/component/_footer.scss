@@ -3,134 +3,98 @@ footer{
     background-color: #E4E4E4;
     margin: 0 auto;
     padding-top: 10%;
-}
+    .top{
+        padding: 3%;
+        max-width: $md;
+        margin:0 auto;
+        nav{
+            display: grid;
+            grid-template-columns: 50% auto;
+            grid-gap: 10px;
+            margin: 0 auto;
+            padding-bottom: 5%;
+        }
+    }
+    .info{
+        span{
+            font-size: 0.875em;
+            display: block;
+        }
+        .social{
+            justify-content: space-between;
+            display: flex;
+            padding: 5% 45% 5% 0;
+        }
+    } 
+    ul{
+        list-style: none;
+        padding: 0%;
 
-.top{
-    padding: 3%;
-    max-width: $md;
-    margin:0 auto;
-}
-
-footer .info span{
-    font-size: 0.875em;
-    display: block;
-}
-footer .info .social{
-    justify-content: space-between;
-    display: flex;
-    padding: 5% 45% 5% 0;
-}
-
-footer ul{
-    list-style: none;
-    padding: 0%;
-}
-
-footer p{
-    font-size:0.875em;
-    padding-right: 20%;
-}
-footer .top nav{
-    display: grid;
-    grid-template-columns: 50% auto;
-    grid-gap: 10px;
-    margin: 0 auto;
-    padding-bottom: 5%;
-}
-
-footer ul li a{
-    list-style: none;
-    text-decoration: none;
-    color:$primary-color;
-    line-height: 3em;
-    margin:0;
-}
-
-footer .email {
-    background: $white;
-    border: 1.5px solid $primary-color;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        li{
+            a{
+                list-style: none;
+                text-decoration: none;
+                color:$primary-color;
+                line-height: 3em;
+                margin:0;
+            }
+        }
+    }
+    p{
+        font-size:0.875em;
+        padding-right: 20%;
+    }
     
-}
-footer .email button{
-    float:right;
-    font-family: $primary-font;
-    border: none;
-    font-size: $font-size;
-    background: none;
-    text-transform: uppercase;
-    vertical-align: middle;
-    height: 40px;
-    padding: 0%;
-    width: 12%;
-}
-
-footer .email input{
-    width:83%;
-    border: none;
-    height: 40px;
-    margin: 0;
-    padding-left: 3%;
-}
-
-::placeholder{
-    color: $primary-color;
-    opacity: 1;
-    font-weight: 600;
-}
-.form {
-    form{
-        margin-bottom: 10%;
-    }
-    span{
-        margin-right: 60%;
-    }
-}
-
-.bottom{
-    border-top: 1px solid #CFCDCD;
-    max-width: $md;
-    margin:0 auto;
-    &__form{
-        padding: 5% 3%;
-        label{
-            color: $grey;
+    .formulaire {
+        form{
+            margin-bottom: 10%;
         }
-        select {
-            border: none;
-            margin-left: 5%;
-            background: url(../Uomo/assets/arrow.svg) no-repeat right $grey-light;
-            -webkit-appearance: none;
+        span{
+            margin-right: 60%;
         }
     }
-    &__lang{
-        padding: 5% 0;
-        select{
-            background-position-x: 99%;
-            width: 170px;
+    .bottom{
+        border-top: 1px solid #CFCDCD;
+        max-width: $md;
+        margin:0 auto;
+        &__form{
+            padding: 5% 3%;
+            label{
+                color: $grey;
+            }
+            select {
+                border: none;
+                margin-left: 5%;
+                background: url(../Uomo/assets/arrow.svg) no-repeat right $grey-light;
+                -webkit-appearance: none;
+            }
+        }
+        &__lang{
+            padding: 5% 0;
+            select{
+                background-position-x: 99%;
+                width: 170px;
+            }
+        }
+    
+        &__currency{
+            select{
+                background-position-x: 99%;
+                width: 60px;
+                margin-left: 7%;
+            }
+        }
+    
+    }
+    @media (min-width:$md ){
+        .top nav{
+            grid-template-columns: 33% 33% 33%;
+            margin:0;
         }
     }
-
-    &__currency{
-        select{
-            background-position-x: 99%;
-            width: 60px;
-            margin-left: 7%;
-        }
-    }
-
-}
-@media (min-width:$md ){
-    footer .top nav{
-        grid-template-columns: 33% 33% 33%;
-        margin:0;
-    }
-}
-
-@media (min-width:$xl ){
-
-    footer{
+    
+    @media (min-width:$xl ){
+    
         padding: 0;
         padding-top: 1%;
         .info{
@@ -143,55 +107,55 @@ footer .email input{
                 padding-bottom: 5%;
             }
         }
-        .form{
+        .formulaire{
             padding-top:3%;
         }
 
-    }
-    .top{
-       display: grid;
-        grid-template-columns: 28% auto 25%;
-        max-width: $container;
-        margin:0 auto;
-        padding:3% 0;
-    }
-    
-    footer .top nav{
-        grid-template-columns: 33% 33% 33%;
-        margin:0;
-    }
-  
-    .bottom{
-        max-width: $container;
-        &__form{
-            display:flex;
-            justify-content:flex-end;
-            margin: 0 auto;
-            padding: 3% 0;
+        
+        .top{
+           display: grid;
+            grid-template-columns: 28% auto 25%;
+            max-width: $container;
+            margin:0 auto;
+            padding:3% 0;
         }
-        span{
-            width:50%;
-            justify-content:flex-start;
-            display: flex;
+        
+        .top nav{
+            grid-template-columns: 33% 33% 33%;
+            margin:0;
         }
-        &__lang{
+      
+        .bottom{
+            max-width: $container;
+            &__form{
+                display:flex;
+                justify-content:flex-end;
+                margin: 0 auto;
+                padding: 3% 0;
+            }
+            span{
+                width:50%;
+                justify-content:flex-start;
+                display: flex;
+            }
+            &__lang{
+                padding: 0;
+                
+                width:30%;
+                justify-content:flex-end;
+                display: flex;
+            }
+            &__currency{
+                width:20%;
+                
+                justify-content:flex-end;
+                display: flex;
+            }
+        }
+        
+        ul{
+            margin:0;
             padding: 0;
-            
-            width:30%;
-            justify-content:flex-end;
-            display: flex;
-        }
-        &__currency{
-            width:20%;
-            
-            justify-content:flex-end;
-            display: flex;
         }
     }
-    
-    footer ul{
-        margin:0;
-        padding: 0;
-    }
-    
 }

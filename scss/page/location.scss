@@ -1,10 +1,45 @@
+
+/*Locator part*/
+.locator{
+    p{
+        line-height: 10px;
+    }
+    &__scroll{
+        padding-right: 1em;
+        .form{
+            &__input{
+                width:90%;
+            }
+            &__button{
+                width: 10%;
+            }
+        }
+        ul{
+            padding-left: 0;
+            padding-right: 3em;
+            list-style: none;
+            max-height: 75vh; 
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+                width: 0.5em;
+            }
+            &::-webkit-scrollbar-track {
+                display: none;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: $grey-light;
+                border-radius: 30px;
+            }
+        }
+    }
+    
+
+}
 /*GOOGLE MAPS INFO DESIGN*/
 /*Please click on the map to see the change*/
 #map{
     height: 80vh;
-    p{
-        line-height: 10px;
-    }
+    
     .gm-style .gm-style-iw-c{
         border-radius: 0!important;
     }
@@ -15,24 +50,5 @@
     }
     .gm-style-iw-t::after{
         display: none!important;
-    }
-}
-
-/*Locator part*/
-.locator{
-    padding-right: 1em;
-    ul{
-        max-height: 75vh; 
-        overflow-y: scroll;
-        &::-webkit-scrollbar {
-            width: 0.5em;
-        }
-        &::-webkit-scrollbar-track {
-            display: none;
-        }
-        &::-webkit-scrollbar-thumb {
-            background-color: $grey-light;
-            border-radius: 30px;
-        }
     }
 }

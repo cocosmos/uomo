@@ -9,6 +9,7 @@
           //Custom destinations
         var arrDestinations = [
             {
+                id:0,
                 lat: 50.815155, 
                 lon: -0.137072, 
                 title: "Store in London",
@@ -19,6 +20,7 @@
                 type: "location",
             },
             {
+                id:1,
                 lat: 50.822638, 
                 lon: -0.137361, 
                 title: "Store in Istanbul",
@@ -29,8 +31,8 @@
                 type: "location",
             },
             {
-                lat: 50.821226, 
-                lon: -0.139372, 
+                lat: 50.831226, 
+                lon: -0.145372, 
                 title: "Store in New York",
                 adress: "1418 River Drive, Suite 35 Cottonhall, CA 9622",
                 country: "United States",
@@ -66,7 +68,7 @@
             bindInfoWindow(marker, map, infowindow, "<h2>" + arrDestinations[i].title+"</h2>" + "<p>" + arrDestinations[i].adress + "</p>"+ "<p>" + arrDestinations[i].country + "</p>"+ "<p>" + arrDestinations[i].phone + "</p>"+ "<p>" + arrDestinations[i].timetable + "</p>");  
         }
     }
-    
+ 
     function bindInfoWindow(marker, map, infowindow, html) { 
         google.maps.event.addListener(marker, 'click', function() { 
             infowindow.setContent(html); 
@@ -75,3 +77,7 @@
     } 
     
     google.maps.event.addDomListener(window, 'load', init);
+    
+    function myClick(id){
+        google.maps.event.trigger(markers[id], 'click');
+    }
