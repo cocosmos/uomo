@@ -1,18 +1,4 @@
-/*
 
-* {
-    padding: 0;
-    margin: 0;
-    font-family: 'IBM Plex Sans', sans-serif;
-  }
-  body {
-      width: 100vw;
-      height: 100vh;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
   .counter {
       width: 150px;
       margin: auto;
@@ -38,4 +24,16 @@
       cursor: pointer;
       color: #0052cc;
       user-select: none;
-  }*/
+  }
+
+.shop-single{
+    &__description{
+        display: block;
+    }
+    &__information{
+        display: none;
+    }
+    &__reviews{
+        display: none;
+    }
+}

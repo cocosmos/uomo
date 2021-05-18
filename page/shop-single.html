@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UOMO</title>
+    
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/ubc8lme.css">
     <script src="https://kit.fontawesome.com/650b750a42.js" crossorigin="anonymous"></script>
@@ -25,37 +26,100 @@
                             <input type="text" value="1">
                             <span class="up" onClick='increaseCount(event, this)'>+</span>
                         </div>
-                        <a class="btn btn_black" href="">Add to cart</a>
-                        <a class="collection__link" href=""><img src="../assets/004-heart.svg" alt="">Add to wishlist</a><span class="collection__line"></span>
+                        <a class="btn btn_black" href="" onClick="hide_element()">Add to cart</a>
+                        <a class="collection__link" href="#"><img src="../assets/004-heart.svg" alt="">Add to wishlist</a><span class="collection__line"></span>
                         <a href="" class="collection__link">Share</a><br>
                         <span><span class="shop-single__info">Sku:</span> N/A</span><br>
                         <span><span class="shop-single__info">Categories:</span> Casual & Urban Wear, Jackets, Men</span><br>
                         <span><span class="shop-single__info">Tags:</span> biker, black, bomber, leather</span>
+                    </div> 
+                </div>
+            </div>
+            <div class="smallcontainer">
+                <div id="shop-single__link">
+                    <a href="#" onclick="btn_description()" class="shop-link shop-link__active">Description</a>
+                    <a href="#" onclick="btn_additional()" class="shop-link">Additional information</a>
+                    <a href="#" onclick="btn_reviews()" class="shop-link">reviews <span>(3)</span></a>
+                </div>
+                
+                <div class="shop-single__description" id="description">
+                    <h6>Sed do eiusmod tempor incididunt ut labore</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <h6>Why choose product?</h6>
+                    <ul>
+                        <li>Creat by cotton fibric with soft and smooth</li>
+                        <li>Simple, Configurable (e.g. size, color, etc.), bundled</li>
+                        <li>Downloadable/Digital Products, Virtual Products</li>
+                    </ul>
+                    <h6>Sample Number List</h6>
+                    <ol>
+                        <li>Create Store-specific attrittbutes on the fly</li>
+                        <li>Simple, Configurable (e.g. size, color, etc.), bundled</li>
+                        <li>Downloadable/Digital Products, Virtual Products</li>
+                    </ol>
+                    <h6>Lining</h6>
+                    <p>100% Polyester, Main: 100% Polyester.</p>
+                </div>
+                <div class="shop-single__information" id="additional">
+                    <table>
+                        <tr>
+                            <th><h6>Weight</h6></th>
+                            <td>1.25kg</td>
+                        </tr>
+                        <tr>
+                            <th><h6>Dimensions</h6></th>
+                            <td>90 x 60 x 90 cm</td>
+                        </tr>
+                        <tr>
+                            <th><h6>Size</h6></th>
+                            <td>XS, S, M, L, XL</td>
+                        </tr>
+                        <tr>
+                            <th><h6>Color</h6></th>
+                            <td>Black, Orange, White</td>
+                        </tr>
+                        <tr>
+                            <th><h6>Storage</h6></th>
+                            <td>Relaxed fit shirt-style dress with a rugged</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="shop-single__reviews" id="reviews">
+                    <h6>Reviews</h6>
+                    <div class="shop-single__item">
+                        <img src="" alt="">
+                        <span>Janice Miller</span>
+                        <span class="shop-single__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <br><span>April 06, 2020</span>
+                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est…</p>
                     </div>
-                    <div class="shop-single__description">
-                        <a href="" class="collection__link">Description</a>
-                        <a href="" class="collection__link">Additional information</a>
-                        <a href="" class="collection__link">reviews (3)</a>
-                        <h6>Sed do eiusmod tempor incididunt ut labore</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                        <h6>Why choose product?</h6>
-                        <ul>
-                            <li>Creat by cotton fibric with soft and smooth</li>
-                            <li>Simple, Configurable (e.g. size, color, etc.), bundled</li>
-                            <li>Downloadable/Digital Products, Virtual Products</li>
-                        </ul>
-                        <h6>Sample Number List</h6>
-                        <ol>
-                            <li>Create Store-specific attrittbutes on the fly</li>
-                            <li>Simple, Configurable (e.g. size, color, etc.), bundled</li>
-                            <li>Downloadable/Digital Products, Virtual Products</li>
-                        </ol>
-                        <h6>Lining</h6>
-                        <p>100% Polyester, Main: 100% Polyester.</p>
+                    <div class="shop-single__item">
+                        <img src="" alt="">
+                        <span>Jack Hoe</span>
+                        <span class="shop-single__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <br><span>April 06, 2020</span>
+                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est…</p>
+                    </div>
+                    <div class="shop-single__comment">
+                        <h6>Be the first to review “Message Cotton T-Shirt”</h6>
+                        <p>Your email address will not be published. Required fields are marked *</p>
+                        <span>Your rating *</span>
+                        <span class="shop-single__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <form action="POST" class="form">
+                            <textarea id="reviews" name="reviews" placeholder="Your review" style="height:170px"></textarea> 
+                            <input class="form__input" type="text" name="name" id="name" placeholder="Your name" required>
+                            <input class="form__input" type="email" name="email" id="email" placeholder="Email adress">
+                            <input type="checkbox" name="save" id="save"> <label for="save">Save my name, email, and website in this browser for the next time I comment.</label>
+                            <button class="btn btn_black" type="submit">submit</button>
+                        </form>
+
                     </div>
                 </div>
             </div>
+
         </div>
-            
+        <script src="../script/single_hide.js"></script>
+        <script src="../script/counter.js"></script>
+        <script src="../script/active__link.js"></script>
     </body>
 </html>

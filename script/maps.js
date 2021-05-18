@@ -75,9 +75,7 @@
             infowindow.open(map, marker); 
         }); 
     } 
-    
+
     google.maps.event.addDomListener(window, 'load', init);
     
-    function myClick(id){
-        google.maps.event.trigger(markers[id], 'click');
-    }
+

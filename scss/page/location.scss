@@ -1,9 +1,7 @@
 
 /*Locator part*/
 .locator{
-    p{
-        line-height: 10px;
-    }
+    
     &__scroll{
         padding-right: 1em;
         .form{
@@ -30,6 +28,23 @@
                 background-color: $grey-light;
                 border-radius: 30px;
             }
+            
+            li{
+                padding-bottom: 20px;
+                border-bottom: 2px solid $grey-light;
+                p{
+                    line-height: 20px;
+                    margin: 0;
+                    margin-bottom: 5px;
+                    &:nth-child(5){
+                        margin-bottom: 15px
+                    }
+                }
+                .collection__line{
+                    width: 80px;
+                    margin-top: 10px;
+                }
+            }
         }
     }
     
@@ -37,6 +52,7 @@
 }
 /*GOOGLE MAPS INFO DESIGN*/
 /*Please click on the map to see the change*/
+/*Color of the map after subscribe to an google maps API*/
 #map{
     height: 80vh;
     

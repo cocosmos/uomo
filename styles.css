@@ -827,7 +827,8 @@ h5 {
 
 h6 {
   font-size: 1em;
-  font-weight: 400;
+  font-weight: 600;
+  text-align: left;
 }
 
 .link a {
@@ -887,6 +888,19 @@ a {
   display: inline-block;
   margin-right: 15px;
   position: relative;
+}
+
+.shop-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  font-weight: 200;
+  color: #E4E4E4;
+}
+.shop-link__active, .shop-link:hover {
+  color: #222222;
+  border-bottom: 3px solid #222222;
 }
 
 @media (min-width: 768px) {
@@ -1351,9 +1365,8 @@ footer .bottom__currency select {
 
 .form {
   background: #FFFFFF;
-  border: 1.5px solid #222222;
   box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
 }
 .form__button {
   float: right;
@@ -1369,10 +1382,10 @@ footer .bottom__currency select {
 }
 .form__input {
   width: 83%;
-  border: none;
   height: 40px;
   margin: 0;
   padding-left: 3%;
+  border: 1px solid #E4E4E4;
 }
 .form::placeholder {
   color: #222222;
@@ -1524,51 +1537,46 @@ body main .limited_slider .ctrl-btn.pro-next {
   }
 }
 
-/*
-
-* {
-    padding: 0;
-    margin: 0;
-    font-family: 'IBM Plex Sans', sans-serif;
-  }
-  body {
-      width: 100vw;
-      height: 100vh;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-  .counter {
-      width: 150px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-  .counter input {
-      width: 50px;
-      border: 0;
-      line-height: 30px;
-      font-size: 20px;
-      text-align: center;
-      background: #0052cc;
-      color: #fff;
-      appearance: none;
-      outline: 0;
-  }
-  .counter span {
-      display: block;
-      font-size: 25px;
-      padding: 0 10px;
-      cursor: pointer;
-      color: #0052cc;
-      user-select: none;
-  }*/
-/*Locator part*/
-.locator p {
-  line-height: 10px;
+.counter {
+  width: 150px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.counter input {
+  width: 50px;
+  border: 0;
+  line-height: 30px;
+  font-size: 20px;
+  text-align: center;
+  background: #0052cc;
+  color: #fff;
+  appearance: none;
+  outline: 0;
+}
+
+.counter span {
+  display: block;
+  font-size: 25px;
+  padding: 0 10px;
+  cursor: pointer;
+  color: #0052cc;
+  user-select: none;
+}
+
+.shop-single__description {
+  display: block;
+}
+.shop-single__information {
+  display: none;
+}
+.shop-single__reviews {
+  display: none;
+}
+
+/*Locator part*/
 .locator__scroll {
   padding-right: 1em;
 }
@@ -1595,9 +1603,26 @@ body main .limited_slider .ctrl-btn.pro-next {
   background-color: #E4E4E4;
   border-radius: 30px;
 }
+.locator__scroll ul li {
+  padding-bottom: 20px;
+  border-bottom: 2px solid #E4E4E4;
+}
+.locator__scroll ul li p {
+  line-height: 20px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+.locator__scroll ul li p:nth-child(5) {
+  margin-bottom: 15px;
+}
+.locator__scroll ul li .collection__line {
+  width: 80px;
+  margin-top: 10px;
+}
 
 /*GOOGLE MAPS INFO DESIGN*/
 /*Please click on the map to see the change*/
+/*Color of the map after subscribe to an google maps API*/
 #map {
   height: 80vh;
 }
