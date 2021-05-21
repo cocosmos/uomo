@@ -1,12 +1,12 @@
 //Button
 .btn{
-    padding: 15px 100px;
+    padding: 15px 60px;
     font-family: $primary-font;
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 .btn_black{
@@ -32,7 +32,7 @@
     color: $white;
 }
 
-.ctrl-btn{
+.ctrl-btn {
     background-color: $white;
     border-radius: 50%;
     border: 1px solid $grey-light;

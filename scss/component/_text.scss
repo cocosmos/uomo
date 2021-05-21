@@ -89,7 +89,7 @@ a{
     letter-spacing: 1px;
     font-weight: 200;
     color: $primary-color;
-        
+    
 }
 &__title{
     text-transform: uppercase;
@@ -118,7 +118,7 @@ a{
     font-size: 0.9em;
     letter-spacing: 1px;
     font-weight: 200;
-    color: $grey-light;
+    color: $grey;
 
     &__active, &:hover{
         color: $primary-color;

@@ -1,39 +1,98 @@
-
-  .counter {
-      width: 150px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-  .counter input {
-      width: 50px;
-      border: 0;
-      line-height: 30px;
-      font-size: 20px;
-      text-align: center;
-      background: #0052cc;
-      color: #fff;
-      appearance: none;
-      outline: 0;
-  }
-  .counter span {
-      display: block;
-      font-size: 25px;
-      padding: 0 10px;
-      cursor: pointer;
-      color: #0052cc;
-      user-select: none;
-  }
-
 .shop-single{
+    *{
+        line-height: 1.8em;
+    }
+    &__meta{
+        h2{
+            font-size: 1.3em;
+        }
+        h3{
+            font-size: 1.4em;
+        }
+    }
+    &__counter{
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $grey-light;
+        margin-right: 5%;
+        color:$grey;
+
+        input{
+            width: 50px;
+            border: 0;
+            font-size: 1em;
+            text-align: center;
+            appearance: none;
+            outline: 0;
+            color:$grey;
+            padding-top: 10px;
+        }
+        span{
+            display: block;
+            font-size: 25px;
+            padding: 0;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+    }
+    &__info{
+        color: $grey;
+        text-transform: uppercase;
+    }
+    &__space{
+        margin-top: 10%;
+        
+        .button{
+            flex-grow: 1;
+            
+            .btn{
+                padding: 15px 0;
+                width: 100%;
+            }
+        }
+    }
+    &__link{
+       text-align: center;
+        .shop-link{
+            margin: 0 25px;
+        }
+    }
+    .collection{
+        &__link{
+            
+            padding-right: 5%;
+            i{
+                padding-right: 10px;
+            }
+        }
+        &__line{
+            width: 25%;
+            padding-top: 5px;
+        }
+    }
+
+
     &__description{
-        display: block;
+        display: none;
+        ul, ol{
+            padding: 0 20px;
+            
+        }
+        li::marker{
+            color:$grey;
+        }
     }
     &__information{
         display: none;
+        h6{
+           width: 9em;
+           margin: 1em;
+        }
     }
     &__reviews{
-        display: none;
+        display: block;
     }
 }
