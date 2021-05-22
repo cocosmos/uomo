@@ -1,8 +1,57 @@
 .shop-single{
+
+    margin: 0;
+    box-sizing: border-box;
+    .smallcontainer{
+        margin-top:5% ;
+        margin-bottom: 5%;
+    }
+    /*image product gallery*/
+    &-image {
+        &__thumb{
+            position: relative;
+            #ProductImg{
+                transform: scale(1);
+            }
+        }
+        &__slider{
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        &__snapshot{
+            flex-basis: 24%;
+            cursor: pointer;
+        }
+        &__prev{
+            position: absolute;
+            left: 5%;
+            top: 45%;
+            z-index: 1050;
+            
+        }
+        &__next{
+            position: absolute;
+            right: 5%;
+            
+            top: 45%;
+            z-index: 1050;
+        }
+        &__sizer{
+            position: absolute;
+            right: 4%;
+            bottom: 5%;
+            
+        }
+    }
     *{
         line-height: 1.8em;
     }
+    /*Meta description part*/
     &__meta{
+        .hide{
+            display: none;
+        }
         h2{
             font-size: 1.3em;
         }
@@ -43,7 +92,7 @@
         text-transform: uppercase;
     }
     &__space{
-        margin-top: 10%;
+        margin-top: 8%;
         
         .button{
             flex-grow: 1;
@@ -53,6 +102,19 @@
                 width: 100%;
             }
         }
+        .collection{
+            &__link{
+                
+                padding-right: 5%;
+                i{
+                    padding-right: 10px;
+                }
+            }
+            &__line{
+                width: 25%;
+                padding-top: 5px;
+            }
+        }
     }
     &__link{
        text-align: center;
@@ -60,23 +122,11 @@
             margin: 0 25px;
         }
     }
-    .collection{
-        &__link{
-            
-            padding-right: 5%;
-            i{
-                padding-right: 10px;
-            }
-        }
-        &__line{
-            width: 25%;
-            padding-top: 5px;
-        }
-    }
+    
 
-
+    /*Description parts*/
     &__description{
-        display: none;
+        display: block;
         ul, ol{
             padding: 0 20px;
             
@@ -85,6 +135,7 @@
             color:$grey;
         }
     }
+    /*Additionnal information parts*/
     &__information{
         display: none;
         h6{
@@ -92,7 +143,84 @@
            margin: 1em;
         }
     }
+    /*Reviews Part*/
     &__reviews{
-        display: block;
+        
+        display: none;
+        .fa-star{
+            color: $yellow;
+            padding: 3px;
+            font-size: 12px;
+            
+        }
+        .form__input{
+            min-width: 97%;
+        }
+        &-item{
+            display: flex;
+            color: $grey;
+            img{
+                width: 5em;
+                height: 5em;
+                border-radius: 60px;
+                display:inline-block;
+                margin-right: 5%;
+            }
+            
+        }
+        &-stars{
+            float: right;
+        }
+        &-name{
+            color: $primary-color;
+            font-size: 1.1em;
+        }
+        &-comment{
+            h6{
+                margin-bottom: 0;
+            }
+        }
+        .collection__line{
+            width: 100%;
+            margin: 30px 0;
+            padding: 0;
+            border-color:$grey-light;
+        }
+        form{
+            button{
+                margin:20px 0;
+            }
+        }
+    }
+    @media (min-width:$md) {
+        &-image {
+            display: flex;
+            &__thumbnails{
+                padding-right: 5%;
+                width: 85%;
+                order: 1;
+            }
+            &__slider{
+               flex-direction: column;
+               width: 15%;
+               
+               justify-content:unset;
+                
+            }
+            &__snapshot{
+                flex-basis: 10%;
+            }
+            
+            
+        }
+        &__meta{
+            .hide{
+                display: inline;
+                &__prev, &__next{
+                    float: right;
+                    margin: 0 2%;
+                }
+            }
+        }
     }
 }

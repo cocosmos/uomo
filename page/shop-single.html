@@ -10,79 +10,78 @@
     <script src="https://kit.fontawesome.com/650b750a42.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
-    <link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>
+   
     <link rel="stylesheet" href="../styles.css">
 </head>
     <body>
         <div class="shop-single">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 col-md-6 shop-single-image">
-                       <!-- <div class="shop-single-image__thumbnails">
+                    <div class="col-xs-12 col-md-8 shop-single-image">
+                        <div class="shop-single-image__thumbnails">
                             <div class="shop-single-image__thumb">
-                              <img src="http://unsplash.it/90/90?random&gravity=center" alt="">
-                            </div>
-                            <div class="shop-single-image__thumb">
-                              <img src="http://unsplash.it/90/90?random&gravity=center" alt="">
-                            </div>
-                            <div class="shop-single-image__thumb">
-                              <img src="http://unsplash.it/90/90?random&gravity=center" alt="">
-                            </div>
-                            <div class="shop-single-image__thumb">
-                              <img src="http://unsplash.it/90/90?random&gravity=center" alt="">
+                              <img src="http://unsplash.it/660/660?random&gravity=center" width="100%" id="ProductImg">
+                              <button class="shop-single-image__prev ctrl-btn" onclick="prev()"><i class="fas fa-chevron-left"></i></button>
+                              <button class="shop-single-image__next ctrl-btn" onclick="next()"><i class="fas fa-chevron-right"></i></button>
+                              <button class="shop-single-image__sizer ctrl-btn" onclick="zoom()" onclick="resetImg()"><i class="fas fa-expand-arrows-alt"></i></button>
                             </div>
                         </div>
                           
-                        <div class="shop-single-image__slider">
+                        <div class="shop-single-image__slider margin-3">
                             <div class="shop-single-image__snapshot">
-                                <img src="http://unsplash.it/660/660?random&gravity=center" alt="">
+                                <img src="http://unsplash.it/600/600?random&gravity=center" width="100%" class="small-img">
                             </div>
                             <div class="shop-single-image__snapshot">
-                                <img src="http://unsplash.it/660/660?random&gravity=center" alt="">
+                                <img src="http://unsplash.it/500/500?random&gravity=center" width="100%" class="small-img">
                             </div>
                             <div class="shop-single-image__snapshot">
-                                <img src="http://unsplash.it/660/660?random&gravity=center" alt="">
+                                <img src="http://unsplash.it/400/400?random&gravity=center" width="100%" class="small-img">
                             </div>
                             <div class="shop-single-image__snapshot">
-                                <img src="http://unsplash.it/660/660?random&gravity=center" alt="">
+                                <img src="http://unsplash.it/450/450?random&gravity=center" width="100%" class="small-img">
                             </div>
-                        </div>-->
+                        </div>
 
                     </div>
-                    <div class="col-xs-12 col-md-6 shop-single__meta">
-                        <h2>Lightweight Puffer Jacket With a Hood</h2>
-                        <h3>$449</h3>
-                        <p>Phasellus sed volutpat orci. Fusce eget lore mauris vehicula elementum gravida nec dui. Aenean aliquam varius ipsum, non ultricies tellus sodales eu. </p>
-                        <div class="row shop-single__space">
-                            <div class="col-xs-4 shop-single__counter">
-                               <span class="down" onClick='decreaseCount(event, this)'>-</span>
-                                <input type="text" value="1">
-                                <span class="up" onClick='increaseCount(event, this)'>+</span>
+                    <div class="col-xs-12 col-md-4 shop-single__meta">
+                        <div class="margin-3">
+                            <a class="collection__link hide" href="#">HOME/THE SHOP</a>
+                            <a class="collection__link hide hide__next" href="">NEXT <i class="fas fa-chevron-right"></i></a>
+                            <a class="collection__link hide hide__prev" href=""><i class="fas fa-chevron-left"></i> PREV</a>
+                            
+                            <h2>Lightweight Puffer Jacket With a Hood</h2>
+                            <h3>$449</h3>
+                            <p>Phasellus sed volutpat orci. Fusce eget lore mauris vehicula elementum gravida nec dui. Aenean aliquam varius ipsum, non ultricies tellus sodales eu. </p>
+                            <div class="row shop-single__space">
+                                <div class="col-xs-4 shop-single__counter">
+                                <span class="down" onClick='decreaseCount(event, this)'>-</span>
+                                    <input type="text" value="1">
+                                    <span class="up" onClick='increaseCount(event, this)'>+</span>
+                                </div>
+                                <div class="col-xs-7 button">
+                                    <button class="btn btn_black">Add to cart</button>
+                                </div>
                             </div>
-                            <div class="col-xs-7 button">
-                                <button class="btn btn_black">Add to cart</button>
+                            <div class="shop-single__space">
+                                <a class="collection__link" href="#"><i class="far fa-heart"></i>Add to wishlist</a>
+                                <a href="" class="collection__link"><i class="fas fa-share-alt"></i>Share</a><br>
+                                <span class="collection__line"></span>
                             </div>
-                        </div>
-                        <div class="shop-single__space">
-                            <a class="collection__link" href="#"><i class="far fa-heart"></i>Add to wishlist</a>
-                            <a href="" class="collection__link"><i class="fas fa-share-alt"></i>Share</a><br>
-                            <span class="collection__line"></span>
-                        </div>
-                        <div class="shop-single__space">
-                            <span><span class="shop-single__info">Sku:</span> N/A</span><br>
-                            <span><span class="shop-single__info">Categories:</span> Casual & Urban Wear, Jackets, Men</span><br>
-                            <span><span class="shop-single__info">Tags:</span> biker, black, bomber, leather</span>
+                            <div class="shop-single__space">
+                                <span><span class="shop-single__info">Sku:</span> N/A</span><br>
+                                <span><span class="shop-single__info">Categories:</span> Casual & Urban Wear, Jackets, Men</span><br>
+                                <span><span class="shop-single__info">Tags:</span> biker, black, bomber, leather</span>
+                            </div>
                         </div>
                     </div> 
 
                 </div>
             </div>
-            <div class="smallcontainer shop-single__space">
+            <div class="smallcontainer margin-3">
                 <div id="shop-single__link" class="shop-single__link">
-                    <a href="#" onclick="btn_description()" class="shop-link shop-link__active">Description</a>
-                    <a href="#" onclick="btn_additional()" class="shop-link">Additional information</a>
-                    <a href="#" onclick="btn_reviews()" class="shop-link">reviews <span>(3)</span></a>
+                    <a href="#description" onclick="btn_description()" class="shop-link shop-link__active">Description</a>
+                    <a href="#additional" onclick="btn_additional()" class="shop-link">Additional information</a>
+                    <a href="#reviews" onclick="btn_reviews()" class="shop-link">reviews <span>(3)</span></a>
                 </div>
                 
                 <div class="shop-single__description" id="description">
@@ -129,45 +128,52 @@
                 </div>
                 <div class="shop-single__reviews" id="reviews">
                     <h6>Reviews</h6>
-                    <div class="shop-single__item">
-                        <img src="" alt="">
-                        <span>Janice Miller</span>
-                        <span class="shop-single__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                        <br><span>April 06, 2020</span>
-                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est…</p>
+                    <div class="shop-single__reviews-item">
+                        <img src="http://unsplash.it/300/300?random&gravity=center" alt="">
+                        <div>
+                            <span class="shop-single__reviews-name">Janice Miller</span>
+                            <span class="shop-single__reviews-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                            <br><span>April 06, 2020</span>
+                            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est…</p>
+                        </div>
+                        
                     </div>
-                    <div class="shop-single__item">
-                        <img src="" alt="">
-                        <span>Jack Hoe</span>
-                        <span class="shop-single__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                        <br><span>April 06, 2020</span>
-                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est…</p>
+                    <span class="collection__line"></span>
+                    <div class="shop-single__reviews-item">
+                        <img src="http://unsplash.it/300/300?random&gravity=center" alt="">
+                        <div>
+                            <span class="shop-single__reviews-name">Jack Hoe</span>
+                            <span class="shop-single__reviews-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                            <br><span>April 06, 2020</span>
+                            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est…</p>
+                        </div>
                     </div>
-                    <div class="shop-single__comment">
+                    <div class="shop-single__reviews-comment">
                         <h6>Be the first to review “Message Cotton T-Shirt”</h6>
                         <p>Your email address will not be published. Required fields are marked *</p>
                         <span>Your rating *</span>
-                        <span class="shop-single__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
                         <form action="POST" class="form">
-                            <textarea id="reviews" name="reviews" placeholder="Your review" style="height:170px"></textarea> 
+                            <textarea id="reviews" class="form__input" name="reviews" placeholder="Your review" style="height:170px"></textarea> 
                             <input class="form__input" type="text" name="name" id="name" placeholder="Your name" required>
-                            <input class="form__input" type="email" name="email" id="email" placeholder="Email adress">
-                            <input type="checkbox" name="save" id="save"> <label for="save">Save my name, email, and website in this browser for the next time I comment.</label>
+                            <input class="form__input" type="email" name="email" id="email" placeholder="Email adress"><br>
+                            <input type="checkbox" name="save" id="save"> <label for="save">Save my name, email, and website in this browser for the next time I comment.</label><br>
                             <button class="btn btn_black" type="submit">submit</button>
                         </form>
 
                     </div>
                 </div>
-            </div>
+            </div><script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="../slick/slick.min.js"></script> <link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>
 
         </div>
         <script src="../script/single_hide.js"></script>
         <script src="../script/counter.js"></script>
         <script src="../script/active_link.js"></script>
-        <script src="../script/single_slick.js"></script>
+        <script src="../script/single_image_slider.js"></script>
         
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script type="text/javascript" src="../slick/slick.min.js"></script>
+        
     </body>
 </html>
