@@ -119,9 +119,7 @@
             <nav>
                 <div>
                     <ul>
-                        <li><a href="#">
-                                <h5>Company</h5>
-                            </a></li>
+                        <li><a href="#"><h5>Company</h5></a></li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Affiliates</a></li>
@@ -131,9 +129,7 @@
                 </div>
                 <div>
                     <ul>
-                        <li><a href="#">
-                                <h5>Shop</h5>
-                            </a></li>
+                        <li><a href="#"><h5>Shop</h5></a></li>
                         <li><a href="#">New Arrivals</a></li>
                         <li><a href="#">Accesories</a></li>
                         <li><a href="#">Men</a></li>
@@ -143,9 +139,7 @@
                 </div>
                 <div>
                     <ul>
-                        <li><a href="#">
-                                <h5>Help</h5>
-                            </a></li>
+                        <li><a href="#"><h5>Help</h5></a></li>
                         <li><a href="#">Customer Service</a></li>
                         <li><a href="#">My Account</a></li>
                         <li><a href="#">Find a Store</a></li>
@@ -155,15 +149,15 @@
                     </ul>
                 </div>
             </nav>
-            <div class="form">
+            <div class="formulaire">
                 <h5>Subscribe</h5>
                 <p>
-                    Be the first to get the latest news about trends,
-                    promotions, and much more!
+                Be the first to get the latest news about trends,
+                promotions, and much more!
                 </p>
-                <form action="POST" class="email">
-                    <input type="email" placeholder="Your email adress">
-                    <button type="submit">Join</button>
+                <form action="POST" class="form">
+                    <input class="form__input"type="email" placeholder="Your email adress">
+                    <button class="form__button" type="submit">Join</button>
                 </form>
                 <span class="text-simple">Secure payments</span>
                 <img src="../assets/image 20.svg" alt="">
@@ -174,7 +168,7 @@
                 <span class="text-simple">©2020 Uomo</span>
                 <div class="bottom__lang">
                     <label for="lang">Language</label>
-                    <select name="lang" form="lang">
+                    <select name="lang" form="lang" >
                         <option value="gb_en">United Kingdom | English</option>
                         <option value="ch_fr">Suisse | Français</option>
                         <option value="ch_de">Schweiz | Deutsche</option>
@@ -183,7 +177,7 @@
                 </div>
                 <div class="bottom__currency">
                     <label for="currency">Currency</label>
-                    <select name="currency" form="currency">
+                    <select name="currency" form="currency" >
                         <option value="USD">$ USD</option>
                         <option value="CHF">CHF</option>
                         <option value="EUR">€ EUR</option>
@@ -193,8 +187,16 @@
             </div>
         </div>
         <button onclick="topFunction()" id="up"><img src="../assets/arrow.svg" alt=""></button>
-        <script src="../script/up.js"></script>
+        
     </footer>
+    <script src="../script/up.js"></script>
+    <script src="../script/countdown.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script> -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../slick/slick.min.js"></script>
+    <script src="../script/slider-image.js"></script>
+    <script src="../script/toggle-menu.js"></script>
 </body>
 
 </html>
