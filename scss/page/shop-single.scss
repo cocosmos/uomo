@@ -1,6 +1,6 @@
 .shop-single{
 
-    margin: 0;
+    margin: 3% 0;
     box-sizing: border-box;
     .smallcontainer{
         margin-top:5% ;
@@ -196,7 +196,6 @@
         display: none;
     }
     @media (min-width:$md) {
-        
         &-image {
             display: flex;
             &__thumbnails{
