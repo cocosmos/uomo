@@ -1,15 +1,60 @@
-.shop{
-    margin: 3%;
-    gap: 1rem;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    display: grid;
+.shop-list{
+    &__top-page{
+        .special-title{
+            display: none;
+        }  
 
-
-    @media (min-width:$md ){
-        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-    @media (min-width:$lg ){
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+    &__top-left{
+        text-align: center;
+        line-height: 2em;
     }
+    &__top-right{
+        display: none;
+    }
+    &__hide{
+        text-align: center;
+    }
+    &__grid{
+        margin: 3%;
+        gap: 1rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        display: grid;
 
+
+        @media (min-width:$md ){
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        @media (min-width:$lg ){
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+    }
+    @media (min-width:$xl) {
+        &__border{
+            border: 3px solid $grey-light ;
+            padding: 0.5em;
+            display: block;
+        }
+        &__top-page{
+            background-image: url(../uomo/assets/bg.png);
+            background-color: $grey-light;
+            display: flex;
+        }
+        &__top-left{
+            padding-right: 1%;
+           flex-grow: 6;
+            padding-left: 5vw;
+            .special-title{
+                margin-left:4%;
+                display: block;
+            }
+        }
+        &__top-right{
+            flex-grow: 1;
+            display: block;
+        }
+        &__hide{
+            display: none;
+        }
+    }
 }

@@ -2,41 +2,22 @@ body{
     margin: 0 auto;
     main{
         margin: 3%;
-        
-        //Our trendy Products
-        .trendy-products{
-            
-            .product{
-                margin: 2%;
-            }
-             
-        }
-        
-
-        
         h3{
             text-align: center;
         }
-        .customer{
-            text-align: center;
-            margin:5% 0 5% 0;
-        }
-        .social-media{
-            text-align: center;
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0,1fr));
-            grid-template-rows: repeat(3, minmax(0, 1fr));
-            grid-gap: 1rem;
-            height: 100%;
-            margin:5% 0 5% 0;
-
-            img{
-                width: 100%;
-                height: 100%;
-            }
+        /*TRENDY PRODUCTS PART*/
+        .trendy-products{
+            gap:$gap;
+            .product{
+                margin: 0;
+                flex: 1 1 40%;
+                
+            }  
             
         }
-        //limited slider
+        
+    
+       /*SLIDER PART*/
         .limited_slider{
             flex-wrap: nowrap;
             gap: 15px;
@@ -58,21 +39,104 @@ body{
                 }
             }
             
-            
-            
+            /*Arrow slider*/
+            .slick-prev{
+                left: -0.5%;
+                z-index: 1;
+
+                &::before {
+                color: black;
+                content: "\f053";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                background-color: $white;
+                border-radius: 50%;
+                border: 1px solid $grey-light;
+                color: $grey;
+                text-align: center;
+                
+                cursor: pointer;
+                font-size: 15px;
+                padding: 11px 12px;
+                }
+            }
+            .slick-next{
+                right: 3%;
+                z-index: 1;
+                &::before {
+                    color: black;
+                    content: "\f054";
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    background-color: $white;
+                    border-radius: 50%;
+                    border: 1px solid $grey-light;
+                    color: $grey;
+                    text-align: center;
+                    cursor: pointer;
+                    font-size: 15px;
+                    padding: 11px 12px;
+        
+                }
+            }
 
         }
+        .middle-link{
+            text-align: center;
+            margin: 3vh 0;
+            .shop-link{
+                margin: 0 2vh;
+                border-width: 5%;
+            }
+        }
+        
+        /*SOCIAL MEDIA*/
+        .social-media{
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0,1fr));
+            grid-template-rows: repeat(3, minmax(0, 1fr));
+            grid-gap: 1rem;
+            height: 100%;
+            margin:5% 0 5% 0;
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            
+        }
+        /*CUSTOMER PARTS*/
+        .customer{
+            text-align: center;
+            margin:5% 0 5% 0;
+        }
+        
+        .slick-dots{
+            .slick-active{
+                border: 1px solid $primary-color;
+                border-radius: 30px;
+            }
+        }
+        
     }
 }
 
-
-
-
-
-@media (min-width:$md ){
-    body{
-        main{
-            .container{
+    @media (min-width:$md ){
+        body{
+            main{
+                /*STARTING AT*/
+                .startingat{
+                    
+                    flex: 1 0 0;
+                }
+                /*TRENDY PRODUCTS*/
+                .trendy-products{
+                  .product{
+                    flex: 1 1 20%;
+                  }
+                }
+                /*SOCIAL MEDIA*/
                 .social-media{
                     grid-template-columns: repeat(6, minmax(0, 1fr));
                     grid-template-rows: repeat(2, minmax(0, 1fr));
@@ -81,10 +145,31 @@ body{
                         display: block;
                     }
                 }
+                /*SLIDER PART*/
+                .limited_slider{
+                    .slick-prev{
+                        left: -2%;
+                        &::before {
+                        background-color: transparent;
+                        border: none;
+                        color: $primary-color;
+                        padding:0;
+                        
+                        }
+                    }
+                    .slick-next{
+                        right: -2%;
+                        &::before {
+                            background-color: transparent;
+                            border: none;
+                            color: $primary-color;
+                            padding:0;
+                
+                        }
+                    }     
+                
+                }
             }
         }
-     
+
     }
-}
-
-

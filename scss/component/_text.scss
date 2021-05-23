@@ -14,6 +14,14 @@ h1{
     font-weight: 900;
     text-transform: uppercase;
     text-align: center;
+    
+}
+/*h1 special*/
+.special-title{
+    -webkit-text-stroke: 2px $grey;  
+    font-size: 5em;
+    line-height: 1em;
+    color: transparent;
 }
 h2{
     font-size: 1.6em;
@@ -91,7 +99,7 @@ a{
     color: $primary-color;
     
 }
-&__title{
+&__category{
     text-transform: uppercase;
     font-size: 0.9em;
     color: $primary-color;
@@ -123,6 +131,36 @@ a{
     &__active, &:hover{
         color: $primary-color;
         border-bottom: 3px solid $primary-color;
+        
+    }
+}
+.line__cta {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    color: $primary-color;
+    
+    &::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 2px;
+    background: $primary-color;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: all 600ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    }
+    
+}
+.link__cta{
+    color: $primary-color;
+    &:hover {  
+        .line__cta {
+        &::after {
+            width: 100%;
+        }
+        }
     }
 }
 

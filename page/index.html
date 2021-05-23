@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uomo</title>
     <link rel="shortcut icon" href="../assets/logo.svg" type="image/x-icon">
+    
+    <link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>
     <link rel="stylesheet" href="../styles.css">
+
+  
     <link rel="stylesheet" href="https://use.typekit.net/ubc8lme.css">
     <script src="https://kit.fontawesome.com/650b750a42.js" crossorigin="anonymous"></script>
 </head>
@@ -17,27 +22,25 @@
                     <div class="col-xs-4 col-md-2 logo">
                         <img src="../assets/logo.svg" alt="">
                     </div>
-                    <div class="col-xs-6 col-md-7 nav">
+                    <div class="col-xs-6 col-md-8 nav">
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">Shop</a></li>
+                            <li><a href="shop.html">Shop</a></li>
                             <li><a href="#">Collection</a></li>
                             <li><a href="#">Journal</a></li>
                             <li><a href="#">Lookbook</a></li>
                             <li><a href="#">Pages</a></li>
                         </ul>
                     </div> 
-                    <div class="col-md-3 icon">
+                    <div class="col-md-2 icon">
                         <a href=""><img src="../assets/001-loupe.svg" alt=""></a>
                         <a href=""><img src="../assets/002-user.svg" alt=""></a>
                         <a href=""><img src="../assets/004-heart.svg" alt=""></a>
-                        <a href=""><img src="../assets/003-shopping-bag.svg" alt=""></a>
-                        <span class="number">3</span>
+                        <a class="shopping" href=""><img src="../assets/003-shopping-bag.svg" alt=""><span class="number">3</span></a>
                         <a href="#"><img src="../assets/nav_icon.svg" alt=""></a>
                     </div>
                     <div class="col-xs-4 col-md-1 shop">
-                        <a href=""><img src="../assets/003-shopping-bag.svg" alt=""></a>
-                        <span class="number">3</span>
+                        <a href=""><img src="../assets/003-shopping-bag.svg" alt=""><span class="number">3</span></a>
                     </div>
                     <div class="col-xs-4 hamburger">
                         <a class="hamburger" href="#"><img src="../assets/nav_icon.svg" alt=""></a>
@@ -45,241 +48,483 @@
                 </div>
             </div>
         </header>
-        <main>
-            
-            <div class="container">
-                <div class="collection">
-                    <div class="collection__card collection__hotlist">
-                        <img src="http://unsplash.it/350/280?random&gravity=center" alt="" >
-                        <div class="collection__meta">
-                            <span class="collection__title">Hot list</span>
-                            <h4><b>Women</b><br>collection</h4>
-                            <a href="#" class="collection__link">Shop Now</a>
-                            <span class="collection__line"></span>
+        <!--SLIDER TOP-->
+        <div class="top-page">
+            <!-- <div class="slides__social">
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-pinterest"></i></a></li>
+                        <li><span>Follow us</span></li>
+                    </ul>
+                </div> -->
+            <div class="slide-border">
+                <div class="slides">
+                    <div class="container single-item">
+                        <div class="slides__item">
+                            <div class="slides__meta">
+                                <span class="deal__line"></span>
+                                <span class="deal__title">New trend</span>
+                                <h1>Summer sale stylish <b>womens</b></h1>
+                                <a href="#" class="link__cta"><span class="line__cta">Discover more</span></a>
+                            </div>
+                            <div class="slides__image">
+                                <img src="http://unsplash.it/300/550?random&gravity=center" alt="">
+                                
+                            </div>
+                            <h1 class="special-title">Summer</h1>
                         </div>
-                    </div>
-                    <div class="collection__card collection__hotlist">
-                        <img src="http://unsplash.it/200/280?random&gravity=center" alt="" >
-                        <div class="collection__meta">
-                            <span class="collection__title">Hot list</span>
-                            <h4><b>Men</b><br>collection</h4>
-                            <a href="#" class="collection__link">Shop Now</a>
-                            <span class="collection__line"></span>
+                        <div class="slides__item">
+                            <div class="slides__meta">
+                                <span class="deal__line"></span>
+                                <span class="deal__title">New trend</span>
+                                <h1>Summer sale stylish <b>mens</b></h1>
+                                <a href="#" class="link__cta"><span class="line__cta">Discover more</span></a>
+                            </div>
+                            <div class="slides__image">
+                                <img src="http://unsplash.it/300/400?random&gravity=center" alt="">
+                                
+                            </div>
+                            <h1 class="special-title">Summer</h1>
                         </div>
-                    </div>
-                    <div class="collection__card collection__hotlist">
-                        <img src="http://unsplash.it/230/280?random&gravity=center" alt="" >
-                        <div class="collection__meta">
-                            <span class="collection__title">Hot list</span>
-                            <h4><b>Kids</b><br>collection</h4>
-                            <a href="#" class="collection__link">Shop Now</a>
-                            <span class="collection__line"></span>
-                        </div>
-                    </div>
-                    <div class="collection__card collection__hotlist collection__pink">
-                        <div class="collection__meta">
-                            <h4><b>E-gift</b><br>cards</h4>
-                            <p>Surprise someone with the gift they really want.</p>
-                            <a href="#" class="collection__link">Discover more</a>
-                            <span class="collection__line"></span>
-                        </div>
+                        <div class="slides__item">
+                            <div class="slides__meta">
+                                <span class="deal__line"></span>
+                                <span class="deal__title">New trend</span>
+                                <h1>Summer sale stylish <b>wom</b></h1>
+                                <a href="#" class="link__cta"><span class="line__cta">Discover more</span></a>
+                            </div>
+                            <div class="slides__image">
+                                <img src="http://unsplash.it/300/400?random&gravity=center" alt="">
+                                
+                            </div>
+                            <h1 class="special-title">Summer</h1>
+                        </div> 
                     </div>
                 </div>
             </div>
+
+            <!-- <div class="slides__scroll">
+                    <span>Scroll</span>
+                    <span class="collection__line"></span>
+                </div> -->
+        <main>
+            <!--COLLECTION PART-->
+            <div class="container">
+                <div class="grid-top-high">
+                    <div class="item1">
+                        <a href="#" class="collection collection--gray collection--twothird link__cta"> <!-- Modifier colors, sizes -->
+                            <div class="collection__backgrounds">
+                                <img src="http://unsplash.it/400/400?random&gravity=center" alt=""> <!-- Image non obligatoire -->
+                            </div>
+                
+                            <div class="collection__content">
+                                <span class="collection__title">Hot list</span>
+                                <h4><strong>Women</strong> Collection</h4>
+                                <span class="line__cta">Shop now</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item2">
+                        <a href="#" class="collection collection--beige collection--half link__cta"> <!-- Modifier colors, sizes -->
+                            <div class="collection__backgrounds">
+                            <img src="http://unsplash.it/400/400?random&gravity=center" alt=""> <!-- Image non obligatoire -->
+                            </div>
+                
+                            <div class="collection__content">
+                            <span class="collection__category">Hot list</span>
+                                <h4><strong>Women</strong> Collection</h4>
+                            <span class="line__cta">Shop now</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item3">
+                        <a href="#" class="collection collection--gray collection--twothird link__cta"> <!-- Modifier colors, sizes -->
+                            <div class="collection__backgrounds">
+                            <img src="http://unsplash.it/400/400?random&gravity=center" alt=""> <!-- Image non obligatoire -->
+                            </div>
+                
+                            <div class="collection__content">
+                            <span class="collection__category">Hot list</span>
+                            <h4><strong>Women</strong> Collection</h4>
+                            <span class="line__cta">Shop now</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item4">
+                        <a href="#" class="collection collection--salmon collection--empty link__cta"> <!-- Modifier colors, sizes -->
+                            <div class="collection__backgrounds">
+                            <img src="http://unsplash.it/400/400?random&gravity=center" alt=""> <!-- Image non obligatoire -->
+                            </div>
+                
+                            <div class="collection__content">
+                            
+                            <h4><strong>E-gift</strong> Cards</h4>
+                            <p>Surprise someone with the gift they really want</p>
+                            <span class="line__cta">Discover More</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--TRENDY PRODUCTS-->
             <div class="container">
                 <h3>Our trendy <b>products</b></h3>
-                <a href="#" class="collection__link">All</a>
-                <a href="#" class="collection__link">Newarrivals</a>
-                <a href="#" class="collection__link">Best seller</a>
-                <a href="#" class="collection__link">Top Rating</a>
-                <div class="row trendy-products">
-                    <div class="col-xs-6 col-md-3 margin">
-                        <article class="product">
-                            <div class="product__image">
-                              <figure>
-                                <img src="http://unsplash.it/350/400?random&gravity=center" alt="" >
-                               <!--  <span class="label label--topleft label--white">New</span>
-                                <span class="label label--topright label--black">-67%</span>-->
-                              </figure>
-                    
-                              <a href="#" class="btn white_btn">Add to cart</a>
-                            </div>
-                    
-                            <div class="product__meta">
-                              <span class="title-description">Dresses</span>
-                              <img src="../assets/heart 1.svg" alt="">
-                              <h6>Colorful jacket</h6>
-                              <div class="price">
-                                <!-- <span class="price__old">$33</span>
-                                <span class="price__discount">$24</span> -->
-                                <span class="price__actual">$99</span>
-                              </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-xs-6 col-md-3 margin">
-                        <article class="product">
-                            <div class="product__image">
-                              <figure>
-                                <img src="http://unsplash.it/350/400?random&gravity=center" alt="" >
-                               <!--  <span class="label label--topleft label--white">New</span>
-                                <span class="label label--topright label--black">-67%</span>-->
-                              </figure>
-                    
-                              <a href="#" class="btn white_btn">Add to cart</a>
-                            </div>
-                    
-                            <div class="product__meta">
-                              <span class="title-description">Dresses</span>
-                              <img src="../assets/heart 1.svg" alt="">
-                              <h6>Colorful jacket</h6>
-                              <div class="price">
-                                <!-- <span class="price__old">$33</span>
-                                <span class="price__discount">$24</span> -->
-                                <span class="price__actual">$99</span>
-                              </div>
-                            </div>
-                          </article>
-                    </div>
-                    <div class="col-xs-6 col-md-3 margin">
-                        <article class="product">
-                            <div class="product__image">
-                              <figure>
-                                <img src="http://unsplash.it/350/400?random&gravity=center" alt="" >
-                               <!--  <span class="label label--topleft label--white">New</span>
-                                <span class="label label--topright label--black">-67%</span>-->
-                              </figure>
-                    
-                              <a href="#" class="btn white_btn">Add to cart</a>
-                            </div>
-                    
-                            <div class="product__meta">
-                              <span class="title-description">Dresses</span>
-                              <img src="../assets/heart 1.svg" alt="">
-                              <h6>Colorful jacket</h6>
-                              <div class="price">
-                                <!-- <span class="price__old">$33</span>
-                                <span class="price__discount">$24</span> -->
-                                <span class="price__actual">$99</span>
-                              </div>
-                            </div>
-                          </article>
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <article class="product">
-                            <div class="product__image">
-                              <figure>
-                                <img src="http://unsplash.it/350/400?random&gravity=center" alt="" >
-                               <!--  <span class="label label--topleft label--white">New</span>
-                                <span class="label label--topright label--black">-67%</span>-->
-                              </figure>
-                    
-                              <a href="#" class="btn white_btn">Add to cart</a>
-                            </div>
-                    
-                            <div class="product__meta">
-                              <span class="title-description">Dresses</span>
-                              <img src="../assets/heart 1.svg" alt="">
-                              <h6>Colorful jacket</h6>
-                              <div class="price">
-                                <!-- <span class="price__old">$33</span>
-                                <span class="price__discount">$24</span> -->
-                                <span class="price__actual">$99</span>
-                              </div>
-                            </div>
-                          </article>
-                    </div>
+                <div class="middle-link">
+                    <a href="#" class="shop-link">All</a>
+                    <a href="#" class="shop-link">New arrivals</a>
+                    <a href="#" class="shop-link">Best seller</a>
+                    <a href="#" class="shop-link">Top Rating</a>
                 </div>
-                <a href="#" class="collection__link">See all product</a>
-                <span class="collection__line"></span>
+                <div class="row trendy-products">
+                    <article class="product">
+                        <div class="product__image">
+                            <figure>
+                            <img src="http://unsplash.it/350/400?random&gravity=center" alt="" >
+                            <!--  <span class="label label--topleft label--white">New</span>
+                            <span class="label label--topright label--black">-67%</span>-->
+                            </figure>
+                
+                            <a href="#" class="btn white_btn">Add to cart</a>
+                        </div>
+                        <div class="product__meta">
+                            <span class="title-description">Dresses</span>
+                            <img src="../assets/heart 1.svg" alt="">
+                            <h6>Colorful jacket</h6>
+                            <div class="price">
+                            <!-- <span class="price__old">$33</span>
+                            <span class="price__discount">$24</span> -->
+                            <span class="price__actual">$99</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <div class="product__image">
+                            <figure>
+                            <img src="http://unsplash.it/350/400?random&gravity=center" alt="" >
+                            <!--  <span class="label label--topleft label--white">New</span>
+                            <span class="label label--topright label--black">-67%</span>-->
+                            </figure>
+                
+                            <a href="#" class="btn white_btn">Add to cart</a>
+                        </div>
+                
+                        <div class="product__meta">
+                            <span class="title-description">Dresses</span>
+                            <img src="../assets/heart 1.svg" alt="">
+                            <h6>Colorful jacket</h6>
+                            <div class="price">
+                            <!-- <span class="price__old">$33</span>
+                            <span class="price__discount">$24</span> -->
+                            <span class="price__actual">$99</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <div class="product__image">
+                            <figure>
+                            <img src="http://unsplash.it/350/400?random&gravity=center" alt="" >
+                            <!--  <span class="label label--topleft label--white">New</span>
+                            <span class="label label--topright label--black">-67%</span>-->
+                            </figure>
+                
+                            <a href="#" class="btn white_btn">Add to cart</a>
+                        </div>
+                        <div class="product__meta">
+                            <span class="title-description">Dresses</span>
+                            <img src="../assets/heart 1.svg" alt="">
+                            <h6>Colorful jacket</h6>
+                            <div class="price">
+                            <!-- <span class="price__old">$33</span>
+                            <span class="price__discount">$24</span> -->
+                            <span class="price__actual">$99</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <div class="product__image">
+                            <figure>
+                            <img src="http://unsplash.it/350/400?random&gravity=center" alt="" >
+                            <!--  <span class="label label--topleft label--white">New</span>
+                            <span class="label label--topright label--black">-67%</span>-->
+                            </figure>
+                
+                            <a href="#" class="btn white_btn">Add to cart</a>
+                        </div>
+                
+                        <div class="product__meta">
+                            <span class="title-description">Dresses</span>
+                            <img src="../assets/heart 1.svg" alt="">
+                            <h6>Colorful jacket</h6>
+                            <div class="price">
+                            <!-- <span class="price__old">$33</span>
+                            <span class="price__discount">$24</span> -->
+                            <span class="price__actual">$99</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product product__hide">
+                        <div class="product__image">
+                            <figure>
+                            <img src="http://unsplash.it/350/400?random&gravity=center" alt="" >
+                            <!--  <span class="label label--topleft label--white">New</span>
+                            <span class="label label--topright label--black">-67%</span>-->
+                            </figure>
+                
+                            <a href="#" class="btn white_btn">Add to cart</a>
+                        </div>
+                
+                        <div class="product__meta">
+                            <span class="title-description">Dresses</span>
+                            <img src="../assets/heart 1.svg" alt="">
+                            <h6>Colorful jacket</h6>
+                            <div class="price">
+                            <!-- <span class="price__old">$33</span>
+                            <span class="price__discount">$24</span> -->
+                            <span class="price__actual">$99</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product product__hide">
+                        <div class="product__image">
+                            <figure>
+                            <img src="http://unsplash.it/350/400?random&gravity=center" alt="" >
+                            <!--  <span class="label label--topleft label--white">New</span>
+                            <span class="label label--topright label--black">-67%</span>-->
+                            </figure>
+                
+                            <a href="#" class="btn white_btn">Add to cart</a>
+                        </div>
+                
+                        <div class="product__meta">
+                            <span class="title-description">Dresses</span>
+                            <img src="../assets/heart 1.svg" alt="">
+                            <h6>Colorful jacket</h6>
+                            <div class="price">
+                            <!-- <span class="price__old">$33</span>
+                            <span class="price__discount">$24</span> -->
+                            <span class="price__actual">$99</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product product__hide">
+                        <div class="product__image">
+                            <figure>
+                            <img src="http://unsplash.it/350/400?random&gravity=center" alt="" >
+                            <!--  <span class="label label--topleft label--white">New</span>
+                            <span class="label label--topright label--black">-67%</span>-->
+                            </figure>
+                
+                            <a href="#" class="btn white_btn">Add to cart</a>
+                        </div>
+                
+                        <div class="product__meta">
+                            <span class="title-description">Dresses</span>
+                            <img src="../assets/heart 1.svg" alt="">
+                            <h6>Colorful jacket</h6>
+                            <div class="price">
+                            <!-- <span class="price__old">$33</span>
+                            <span class="price__discount">$24</span> -->
+                            <span class="price__actual">$99</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product product__hide">
+                        <div class="product__image">
+                            <figure>
+                            <img src="http://unsplash.it/350/400?random&gravity=center" alt="" >
+                            <!--  <span class="label label--topleft label--white">New</span>
+                            <span class="label label--topright label--black">-67%</span>-->
+                            </figure>
+                
+                            <a href="#" class="btn white_btn">Add to cart</a>
+                        </div>
+                
+                        <div class="product__meta">
+                            <span class="title-description">Dresses</span>
+                            <img src="../assets/heart 1.svg" alt="">
+                            <h6>Colorful jacket</h6>
+                            <div class="price">
+                            <!-- <span class="price__old">$33</span>
+                            <span class="price__discount">$24</span> -->
+                            <span class="price__actual">$99</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="middle-link">
+                    <a href="#" class="link__cta"><span class="line__cta">See all product</span></a>
+                </div>
+                
             </div>
-            <div class="container">
-                <div class="row collection">
-                    <div class="col-xs-12 deal">
-                        <div class="deal__meta">
+            <!--DEAL PART-->
+            <div class="deal">
+                <a href="#" class="link__cta"> 
+                    <div class="deal__flex">
+                        <div class="deal__content">
                             <span class="deal__line"></span>
                             <span class="deal__title">Deal of the week</span>
-                            <h3><b>Spring</b><br>collection</h3>
-                            <a href="#" class="collection__link">Shop Now</a>
-                            <span class="collection__line"></span>
+                            <h3><b>Spring</b> collection</h3>
+                            <span class="line__cta">Shop now</span>
                             <p id="countdown"></p>
                             <p>Days Hours Mins Sec</p>
                         </div>
-                    </div>
-                </div>
-                <div class="row collection">
-                    <div class="col-xs-12 col-md-6 collection__card collection__red">
-                        <img src="http://unsplash.it/230/280?random&gravity=center" alt="" >
-                        <div class="collection__meta">
-                            <span class="collection__price">Starting at $19</span>
-                            <h2>Women's T-Shirts</h2>
-                            <a href="#" class="collection__link">Shop Now</a>
-                            <span class="collection__line"></span>
+                    
+                        <div class="deal__backgrounds">
+                            <img src="http://unsplash.it/250/350?random&gravity=center" alt=""> <!-- Image non obligatoire -->
                         </div>
                     </div>
-                    <div class="col-xs-12 col-md-6 collection__card">
-                        <img src="http://unsplash.it/320/280?random&gravity=center" alt="" >
-                        <div class="collection__meta">
-                            <span class="collection__price">Starting at $39</span>
-                            <h2>Men's Sportswear</h2>
-                            <a href="#" class="collection__link">Shop Now</a>
-                            <span class="collection__line"></span>
-                        </div>
+                </a>
+            </div>
+            <!--STARTING AT-->
+            <div class="container">
+                <div class="row gap">
+                    <div class="col-xs-12 startingat">
+                        <a href="#" class="collection collection--twothird collection__red link__cta"> <!-- Modifier colors, sizes -->
+                            <div class="collection__backgrounds">
+                                <img src="http://unsplash.it/400/400?random&gravity=center" alt=""> <!-- Image non obligatoire -->
+                            </div>
+                
+                            <div class="collection__content">
+                                <span class="collection__price">Starting at $19</span>
+                                <h2>Women's T-Shirts</h2>
+                                <span class="line__cta">Shop now</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 startingat">
+                        <a href="#" class="collection collection--full collection--gray link__cta"> <!-- Modifier colors, sizes -->
+                            <div class="collection__backgrounds">
+                                <img src="http://unsplash.it/400/400?random&gravity=center" alt=""> <!-- Image non obligatoire -->
+                            </div>
+                
+                            <div class="collection__content">
+                                <span class="collection__price">Starting at $39</span>
+                                <h2>Women's T-Shirts</h2>
+                                <span class="line__cta">Shop now</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
+            </div>
+            <div class="container">
                 <h3>Limited <b>Edition</b></h3>
-                <div class="row limited_slider">
-                    <div class="col-xs-6">
-                        <article class="product">
-                            <div class="product__image">
-                              <figure>
-                                <img src="http://unsplash.it/350/400?random&gravity=center" alt="" >
-                               <!--  <span class="label label--topleft label--white">New</span>
-                                <span class="label label--topright label--black">-67%</span>-->
-                              </figure>
+                <div class="limited_slider responsive">
                     
-                              <a href="#" class="btn white_btn">Add to cart</a>
+                    <article class="product">
+                        <div class="product__image">
+                            <figure>
+                            <img src="http://unsplash.it/350/400?random&gravity=center" alt="" >
+                            <!--  <span class="label label--topleft label--white">New</span>
+                            <span class="label label--topright label--black">-67%</span>-->
+                            </figure>
+                
+                            <a href="#" class="btn white_btn">Add to cart</a>
+                        </div>
+                
+                        <div class="product__meta">
+                            <span class="title-description">Dresses</span>
+                            <img src="../assets/heart 1.svg" alt="">
+                            <h6>Colorful jacket</h6>
+                            <div class="price">
+                            <!-- <span class="price__old">$33</span>
+                            <span class="price__discount">$24</span> -->
+                            <span class="price__actual">$99</span>
                             </div>
-                    
-                            <div class="product__meta">
-                              <span class="title-description">Dresses</span>
-                              <img src="../assets/heart 1.svg" alt="">
-                              <h6>Colorful jacket</h6>
-                              <div class="price">
-                                <!-- <span class="price__old">$33</span>
-                                <span class="price__discount">$24</span> -->
-                                <span class="price__actual">$99</span>
-                              </div>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <div class="product__image">
+                            <figure>
+                            <img src="http://unsplash.it/350/400?random&gravity=center" alt="" >
+                            <!--  <span class="label label--topleft label--white">New</span>
+                            <span class="label label--topright label--black">-67%</span>-->
+                            </figure>
+                
+                            <a href="#" class="btn white_btn">Add to cart</a>
+                        </div>
+                
+                        <div class="product__meta">
+                            <span class="title-description">Dresses</span>
+                            <img src="../assets/heart 1.svg" alt="">
+                            <h6>Colorful jacket</h6>
+                            <div class="price">
+                            <!-- <span class="price__old">$33</span>
+                            <span class="price__discount">$24</span> -->
+                            <span class="price__actual">$99</span>
                             </div>
-                          </article>
-                    </div>
-                    <div class="col-xs-6">
-                        <article class="product">
-                            <div class="product__image">
-                              <figure>
-                                <img src="http://unsplash.it/350/400?random&gravity=center" alt="">
-                                   <!--  <span class="label label--topleft label--white">New</span>
-                                <span class="label label--topright label--black">-67%</span>-->
-                              </figure>
-                    
-                              <a href="#" class="btn white_btn">Add to cart</a>
+                        </div>
+                    </article>
+                 
+                    <article class="product">
+                        <div class="product__image">
+                            <figure>
+                            <img src="http://unsplash.it/350/400?random&gravity=center" alt="">
+                                <!--  <span class="label label--topleft label--white">New</span>
+                            <span class="label label--topright label--black">-67%</span>-->
+                            </figure>
+                
+                            <a href="#" class="btn white_btn">Add to cart</a>
+                        </div>
+                
+                        <div class="product__meta">
+                            <span class="title-description">Dresses</span>
+                            <img src="../assets/heart 1.svg" alt="">
+                            <h6>Cropped Faux Leather Jacket</h6>
+                            <div class="price">
+                            <!-- <span class="price__old">$33</span>
+                            <span class="price__discount">$24</span> -->
+                            <span class="price__actual">$45</span>
                             </div>
-                    
-                            <div class="product__meta">
-                              <span class="title-description">Dresses</span>
-                              <img src="../assets/heart 1.svg" alt="">
-                              <h6>Cropped Faux Leather Jacket</h6>
-                              <div class="price">
-                                <!-- <span class="price__old">$33</span>
-                                <span class="price__discount">$24</span> -->
-                                <span class="price__actual">$45</span>
-                              </div>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <div class="product__image">
+                            <figure>
+                            <img src="http://unsplash.it/350/400?random&gravity=center" alt="">
+                                <!--  <span class="label label--topleft label--white">New</span>
+                            <span class="label label--topright label--black">-67%</span>-->
+                            </figure>
+                
+                            <a href="#" class="btn white_btn">Add to cart</a>
+                        </div>
+                
+                        <div class="product__meta">
+                            <span class="title-description">Dresses</span>
+                            <img src="../assets/heart 1.svg" alt="">
+                            <h6>Cropped Faux Leather Jacket</h6>
+                            <div class="price">
+                            <!-- <span class="price__old">$33</span>
+                            <span class="price__discount">$24</span> -->
+                            <span class="price__actual">$45</span>
                             </div>
-                        </article>
-                    </div>
-                    <button class="ctrl-btn pro-prev"><img src="../assets/Group.svg" alt=""></button>
-                    <button class="ctrl-btn pro-next"><img src="../assets/Groupright.svg" alt=""></button>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <div class="product__image">
+                            <figure>
+                            <img src="http://unsplash.it/350/400?random&gravity=center" alt="">
+                                <!--  <span class="label label--topleft label--white">New</span>
+                            <span class="label label--topright label--black">-67%</span>-->
+                            </figure>
+                
+                            <a href="#" class="btn white_btn">Add to cart</a>
+                        </div>
+                
+                        <div class="product__meta">
+                            <span class="title-description">Dresses</span>
+                            <img src="../assets/heart 1.svg" alt="">
+                            <h6>Cropped Faux Leather Jacket</h6>
+                            <div class="price">
+                            <!-- <span class="price__old">$33</span>
+                            <span class="price__discount">$24</span> -->
+                            <span class="price__actual">$45</span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
+
                 <h3>@Uomo</h3>
                 <div class="social-media">
                     <div>
@@ -430,10 +675,15 @@
                 </div>
             </div>
             <button onclick="topFunction()" id="up"><img src="../assets/arrow.svg" alt=""></button>
-            <script src="../script/up.js"></script>
-            <script src="../script/countdown.js"></script>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+            
         </footer>
+        <script src="../script/up.js"></script>
+        <script src="../script/countdown.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script> -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="../slick/slick.min.js"></script>
+        <script src="../script/slider-image.js"></script>
     </body>
 
 </html>

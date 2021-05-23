@@ -192,7 +192,11 @@
             }
         }
     }
+    .related-products{
+        display: none;
+    }
     @media (min-width:$md) {
+        
         &-image {
             display: flex;
             &__thumbnails{
@@ -219,6 +223,17 @@
                 &__prev, &__next{
                     float: right;
                     margin: 0 2%;
+                }
+            }
+        }
+        .related-products{
+            display:block;
+
+            &__show{
+                justify-content: space-between;
+                display: flex;
+                article{
+                    flex-basis: 24%;
                 }
             }
         }

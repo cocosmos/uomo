@@ -1,31 +1,114 @@
 .top-page{
+    .slide-border{
+        margin: 0;
+    }
     .slides{
-        display: grid;
         
-        grid-template-columns: 50fr;
-
-        &__bg{
-
-        }
         background-color: $pink;
-        .item:nth-child(1) {
-            background: url('https://snap-photos.s3.amazonaws.com/img-thumbs/960w/HZZKGVVJ6I.jpg');
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
+        background-image: url('../uomo/assets/bg-white.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        &__item{
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+
         }
-
-
-//A FAIRE
-
-
-
-
-
-
-
-        .deal__line{
-            bottom:5px;
+        &__meta{
+            position: absolute;
+            top: 50%;
+            left: 60%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            
+            
+            h1{
+                font-weight: 200;
+                text-align: left;
+                margin:  2% 0;
+               width: 70%;
+            }
+        }
+        &__image{
+            position: absolute;
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            bottom: 0;     
+            left: 50%;
+            opacity: 0.5;
+        }
+        .special-title{
+            display: none;
         }
     }
+    .single-item{
+        position: relative;
+    }
+    .slick-dots{
+        position: absolute;
+        
+        left: -30%;
+        bottom: 5%;
+    }
+    .slick-dotted.slick-slider{
+        margin-bottom: 0;
+    }
+    @media (min-width:$md) {
+        /*Description*/
+        .slide-border{
+            border: 3px solid $pink ;
+            padding: 0.5em;
+            display: block;
+            margin: 3%;
+        }
+        .slides{
+            &__meta{
+                left: 60%;
+                
+
+                h1{
+                    width: 50%;
+                    font-size: 3em;
+                }
+            }
+            
+            /*image*/
+            &__image{
+                position: absolute;
+                max-width: 100%;
+                width: 100%;
+                height: auto;
+                bottom: 0;     
+                left: 60%;
+            }
+            .special-title{
+                -webkit-text-stroke: 2px $white;
+                
+                display: block;
+                position: absolute;
+                
+                transform: rotate(90deg);
+                top: 35%;
+                right: 0;
+                
+            }
+        }
+    }
+    @media (min-width:$xxl) {
+        .slides{
+            &__meta{
+                left: 50%;
+            }
+        }
+        .slick-dots{
+            position: absolute;
+            
+            left: -47%;
+            bottom: 5%;
+        }
+    }
+
 }
