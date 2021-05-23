@@ -952,22 +952,30 @@ a {
   }
 }
 header .container {
-  padding: 4%;
-  /*OPEN MOBILE MENU*/
+  padding: 20px;
 }
-header .container .icon {
+header .container .header {
+  display: flex;
+}
+header .container .header .icon {
   display: none;
 }
-header .container .shop {
+header .container .header .logo {
+  order: 2;
+  text-align: center;
+  width: 33%;
+}
+header .container .header .shop {
   order: 3;
   position: relative;
+  width: 33%;
 }
-header .container .shop a {
+header .container .header .shop a {
   float: right;
   vertical-align: middle;
   padding: 0 auto;
 }
-header .container .shop span {
+header .container .header .shop span {
   background: #B9A16B;
   position: absolute;
   top: 14px;
@@ -977,52 +985,136 @@ header .container .shop span {
   color: #FFFFFF;
   font-size: 9px;
 }
-header .container .hamburger {
-  order: 1;
-}
-header .container .logo {
-  order: 2;
-  text-align: center;
-}
-header .container img {
+header .container .header .hamburger-menu {
   display: inline-block;
-  vertical-align: middle;
+  order: 1;
+  width: 33%;
+  transition: all 0.3s ease-in-out;
 }
-header .nav {
+header .container .header .hamburger-menu:hover {
+  cursor: pointer;
+}
+header .container .header .hamburger-menu .menu-item {
+  background: #222222;
+  display: block;
+  height: 2px;
+  margin: 0 0 8px;
+  transition: all 0.3s ease-in-out;
+  width: 30px;
+}
+header .container .header .hamburger-menu .menu-item:nth-child(2) {
+  width: 20px;
+}
+header .container .header .hamburger-menu.open .menu-item {
+  margin: 0 0 5px;
+}
+header .container .header .hamburger-menu.open .menu-item:first-child {
+  transform: rotate(45deg);
+  transform-origin: 6px;
+}
+header .container .header .hamburger-menu.open .menu-item:nth-child(2) {
+  opacity: 0;
+}
+header .container .header .hamburger-menu.open .menu-item:nth-child(3) {
+  transform: rotate(-45deg);
+  transform-origin: 4px;
+}
+header .container .header .mobile-header-nav {
+  background-color: #767676;
   display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  z-index: 3;
+  left: 0;
 }
-
+header .container .header .mobile-header-nav li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+header .container .header .mobile-header-nav li a {
+  color: #FFFFFF;
+  display: block;
+  padding: 15px 0;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+header .container .header .mobile-header-nav li a:hover {
+  background-color: #2f2f2f;
+}
 @media (min-width: 800px) {
-  header {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-  header .container {
-    padding: 2% 3%;
-  }
-  header .container .icon {
+  header .container .header .icon {
     display: flex;
+    width: 20%;
     justify-content: space-between;
   }
-  header .container .shop {
+  header .container .header .shop {
     order: 3;
     display: none;
   }
-  header .container .hamburger {
-    order: 3;
+  header .container .header .hamburger-menu {
     display: none;
   }
-  header .container .logo {
+  header .container .header .logo {
     order: -1;
     text-align: left;
+    width: 20%;
   }
-  header .nav {
+  header .container .header .nav {
     display: inline;
+    width: 60%;
+    color: #222222;
   }
-  header .shopping {
+  header .container .header .nav .mobile-header-nav {
+    background-color: #FFFFFF;
+    display: inline;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 0px;
+    width: 100%;
+    z-index: 3;
+    left: 0;
+  }
+  header .container .header .nav .mobile-header-nav li {
+    border-bottom: none;
+    display: inline-block;
+    list-style: none;
+    padding-left: 3%;
+  }
+  header .container .header .nav .mobile-header-nav li a {
+    color: #222222;
+    display: block;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-family: "sofia-pro";
+    font-size: 1em;
+    text-transform: uppercase;
     position: relative;
   }
-  header .shopping span {
+  header .container .header .nav .mobile-header-nav li a:hover {
+    background-color: #FFFFFF;
+  }
+  header .container .header .nav .mobile-header-nav li a:hover::after {
+    position: absolute;
+    display: inline-block;
+    border-bottom: 2px solid #222222;
+    bottom: -1px;
+    content: "";
+    height: 2px;
+    left: 0;
+    width: 60%;
+  }
+  header .container .header .shopping {
+    position: relative;
+  }
+  header .container .header .shopping span {
     background: #B9A16B;
     position: absolute;
     top: 15px;
@@ -1032,43 +1124,50 @@ header .nav {
     color: #FFFFFF;
     font-size: 9px;
   }
-
-  * {
-    box-sizing: border-box;
-  }
 }
-.nav {
-  display: inline;
-}
-.nav ul {
-  padding: 0;
-  margin: 0;
-}
-.nav ul li {
-  display: inline-block;
-  list-style: none;
-  padding-left: 3%;
-}
-.nav ul li a {
-  text-decoration: none;
-  font-family: "sofia-pro";
-  color: #222222;
-  font-size: 1em;
-  padding-bottom: 5px;
-  position: relative;
-  text-transform: uppercase;
-}
-.nav ul li a:hover::after {
-  position: absolute;
-  display: inline-block;
-  border-bottom: 2px solid #222222;
-  bottom: -1px;
-  content: "";
-  height: 2px;
-  left: 0;
-  width: 60%;
+header .container .header * {
+  box-sizing: border-box;
 }
 
+/*NAV STYLES*/
+/*.nav{
+    display:inline;
+    ul{
+        padding: 0;
+        margin: 0;
+        li {
+            display: inline-block;
+            list-style: none;
+            padding-left: 3%;
+
+            a {
+                text-decoration: none;
+                font-family: $primary-font;
+                color: $primary-color;
+                font-size: $font-size;
+                padding-bottom: 5px;
+                position: relative;
+                text-transform: uppercase;
+
+                &:hover{
+                    &::after{
+                        position: absolute;
+                        display:inline-block;
+                        border-bottom: 2px solid $primary-color;
+                        bottom: -1px;
+                        content: "";
+                        height: 2px;
+                        left: 0;
+                        width: 60%;
+                    }
+                }
+
+            }
+        }
+    }   
+
+
+}*/
 footer {
   background-color: #E4E4E4;
   margin: 0 auto;
@@ -1696,6 +1795,8 @@ footer .bottom__currency select {
 
 .oops {
   text-align: center;
+  margin-top: 12%;
+  margin-bottom: 20%;
 }
 .oops h4 {
   font-weight: 900;
@@ -1708,11 +1809,14 @@ footer .bottom__currency select {
   font-size: 1.5em;
 }
 .oops p {
-  margin-top: 8%;
-  margin-bottom: 10%;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 .oops .fas {
   color: black;
+}
+.oops .btn {
+  padding: 15px 100px;
 }
 
 body {
@@ -1857,6 +1961,42 @@ body main .slick-dots .slick-active {
     padding: 0;
   }
 }
+.shop-list .nav {
+  display: inline;
+  width: 60%;
+  color: #222222;
+}
+.shop-list .nav li {
+  border-bottom: none;
+  display: inline-block;
+  list-style: none;
+  padding-left: 3%;
+}
+.shop-list .nav li a {
+  color: #222222;
+  display: block;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  font-family: "sofia-pro";
+  font-size: 1em;
+  text-transform: uppercase;
+  position: relative;
+}
+.shop-list .nav li a:hover {
+  background-color: #FFFFFF;
+}
+.shop-list .nav li a:hover::after {
+  position: absolute;
+  display: inline-block;
+  border-bottom: 2px solid #222222;
+  bottom: -1px;
+  content: "";
+  height: 2px;
+  left: 0;
+  width: 60%;
+}
 .shop-list__top-page .special-title {
   display: none;
 }
@@ -1893,7 +2033,7 @@ body main .slick-dots .slick-active {
     display: block;
   }
   .shop-list__top-page {
-    background-image: url(../uomo/assets/bg.png);
+    background-image: url(./assets/bg.png);
     background-color: #E4E4E4;
     display: flex;
   }
@@ -1903,7 +2043,7 @@ body main .slick-dots .slick-active {
     padding-left: 5vw;
   }
   .shop-list__top-left .special-title {
-    margin-left: 4%;
+    margin-left: 6vw;
     display: block;
   }
   .shop-list__top-right {

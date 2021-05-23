@@ -1,4 +1,41 @@
 .shop-list{
+    .nav{
+        display:inline;
+        width: 60%;
+        color: $primary-color;
+            li {
+              border-bottom: none;
+              display: inline-block;
+                list-style: none;
+                padding-left: 3%;
+                a {
+                    color: $primary-color;
+                    display: block;
+                    padding: 0;
+                    text-align: center;
+                    text-decoration: none;
+                    transition: all 0.3s ease-in-out;
+                    font-family: $primary-font;
+                    font-size: $font-size;
+                    text-transform: uppercase;
+                    position: relative;
+                    &:hover{
+                        background-color: $white;
+                        &::after{
+                            position: absolute;
+                            display:inline-block;
+                            border-bottom: 2px solid $primary-color;
+                            bottom: -1px;
+                            content: "";
+                            height: 2px;
+                            left: 0;
+                            width: 60%;
+                        }
+                    }
+                
+            }
+        }
+    }
     &__top-page{
         .special-title{
             display: none;
@@ -36,7 +73,7 @@
             display: block;
         }
         &__top-page{
-            background-image: url(../uomo/assets/bg.png);
+            background-image: url(./assets/bg.png);
             background-color: $grey-light;
             display: flex;
         }
@@ -45,7 +82,7 @@
            flex-grow: 6;
             padding-left: 5vw;
             .special-title{
-                margin-left:4%;
+                margin-left:6vw;
                 display: block;
             }
         }
